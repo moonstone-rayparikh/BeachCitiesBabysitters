@@ -1,12 +1,6 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,900");
 
-/*
-	Escape Velocity by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -31,6 +25,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
+	min-height: 100%;
 }
 
 ol, ul {
@@ -53,6 +48,7 @@ table {
 
 body {
 	-webkit-text-size-adjust: none;
+	min-height: 100%;
 }
 
 mark {
@@ -108,7 +104,7 @@ input, select, textarea {
 
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 700;
-		color: #484d55;
+		color: #cb931a;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -172,6 +168,28 @@ input, select, textarea {
 
 	p, ul, ol, dl, table, blockquote, form {
 		margin-bottom: 2em;
+	}
+
+	img.resize {
+		max-width:70%;
+		max-height:70%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 0px;
+		margin-bottom: 90px;
+	  }
+	img.resize2 {
+		max-width:70%;
+		max-height:70%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	  }
+	img.resize3 {
+		width: 250px;
+		height: 100%;
+		border-radius: 25px
 	}
 
 /* Container */
@@ -1673,7 +1691,7 @@ input, select, textarea {
 		button.style1,
 		.button.style1 {
 			background: #e97770 url("images/overlay.png");
-			color: #fff;
+			color: #e97770;
 		}
 
 			input[type="button"].style1:hover,
@@ -1699,7 +1717,6 @@ input, select, textarea {
 		.button.style2 {
 			background: none;
 			color: #606167;
-			box-shadow: inset 0px 0px 2px 0px #a0a1a7;
 		}
 
 			input[type="button"].style2:hover,
@@ -2002,18 +2019,24 @@ input, select, textarea {
 			}
 
 		.wrapper.style1 {
-			background: #e97770 url("images/overlay.png");
+			background: #e97770;
 			color: #eee;
 			color: rgba(255, 255, 255, 0.75);
 		}
 
 			.wrapper.style1 .title {
-				background: #e97770 url("images/overlay.png");
+				background: #e97770;
 				color: #fff;
 			}
 
 			.wrapper.style1 h1, .wrapper.style1 h2, .wrapper.style1 h3, .wrapper.style1 h4, .wrapper.style1 h5, .wrapper.style1 h6, .wrapper.style1 strong, .wrapper.style1 b, .wrapper.style1 a {
 				color: #fff;
+			}
+
+			.wrapper.style1 .image {
+				border: solid 5px #cb931a;
+				border-radius: 50%
+				
 			}
 
 		.wrapper.style2 {
@@ -2022,7 +2045,17 @@ input, select, textarea {
 
 			.wrapper.style2 .title {
 				background: #fff;
-				color: #484d55;
+				color: #cb931a;
+			}
+
+			.wrapper.style2 h2 {
+				background: #fff;
+				color: #e97770;
+			}
+
+			.wrapper.style2 p {
+				background: #fff;
+				color: #cb931a;
 			}
 
 		.wrapper.style3 {
@@ -2061,7 +2094,7 @@ input, select, textarea {
 		justify-content: center;
 		position: relative;
 		height: 24em;
-		background: url("../../images/banner.jpg") center center;
+		background: url("images/yellowpastelbackground.png") center center;
 		background-size: cover;
 		padding: 0;
 	}
@@ -2092,14 +2125,14 @@ input, select, textarea {
 		#logo h1 {
 			font-weight: 900;
 			text-transform: uppercase;
-			color: #fff;
+			color: #cb931a;
 			font-size: 2em;
 			letter-spacing: 0.25em;
 		}
 
 		#logo p {
-			color: #eee;
-			color: rgba(255, 255, 255, 0.5);
+			color: #cb931a;
+			color: #cb931a;
 			text-transform: uppercase;
 			margin: 1.25em 0 0 0;
 			display: block;
@@ -2110,24 +2143,31 @@ input, select, textarea {
 /* Nav */
 
 	#nav {
-		position: absolute;
-		display: block;
-		top: 2.5em;
+		overflow: hidden;
+		background: #cb931a url("images/overlay.png");
+		background-color: #cb931a;
+		position: fixed;
+		display: inline-block;
+		top: 0;
 		left: 0;
 		width: 100%;
+		height: 70px;
 		text-align: center;
+		float: left;
+		z-index: 100;
 	}
 
 		#nav > ul {
 			display: inline-block;
-			border-radius: 0.35em;
-			box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.25);
 			padding: 0 1.5em 0 1.5em;
+			float: left;
 		}
 
 			#nav > ul > li {
 				display: inline-block;
 				text-align: center;
+				float: left;
+				margin-left: 20px;
 				padding: 0 1.5em 0 1.5em;
 			}
 
@@ -2137,11 +2177,12 @@ input, select, textarea {
 
 				#nav > ul > li > a, #nav > ul > li > span {
 					display: block;
-					color: #eee;
-					color: rgba(255, 255, 255, 0.75);
+					color: #fff;
+					color: #fff;
 					text-transform: uppercase;
 					text-decoration: none;
-					font-size: 0.7em;
+					font-size: 1em;
+					font-weight: 300;
 					letter-spacing: 0.25em;
 					height: 5em;
 					line-height: 5em;
@@ -2151,14 +2192,31 @@ input, select, textarea {
 					-ms-transition: all .25s ease-in-out;
 					transition: all .25s ease-in-out;
 					outline: 0;
+					margin-top: 2px;
 				}
 
 				#nav > ul > li:hover > a {
-					color: #fff;
+					color: #fff032;
+					z-index: 201;
 				}
 
 				#nav > ul > li.active > a, #nav > ul > li.active > span {
-					color: #fff;
+					color: #cb931a;
+					z-index: 201;
+				}
+
+				.llogo {
+					display: inline-block;
+    				vertical-align: top;
+					
+   					width: 60px;
+  				 	height: 60px;
+					background-color: #f3f3f3;
+					border-radius: 50%;
+ 				   	float: left;
+					margin-left: 70px;
+    				margin-top: 5px;    /* if you want it vertically middle of the navbar. */
+					z-index: 201;
 				}
 
 	.dropotron {
@@ -2269,17 +2327,33 @@ input, select, textarea {
 
 /* Main */
 
+	.main {
+ 	 margin-top: 30px; /* Add a top margin to avoid content overlay */
+	}
+
 /* Footer */
 
 	#footer {
-		background: #282b34 url("images/overlay.png");
+		position: absolute;
+		background: #282b34;
 		color: #eee;
 		color: rgba(255, 255, 255, 0.5);
 		padding-bottom: 6em;
 	}
 
-		#footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6, #footer strong, #footer b, #footer a {
+		#footer h1, #footer h2, #footer h4, #footer h5, #footer h6, #footer strong, #footer b, #footer a {
 			color: #fff;
+		}
+
+		#footer h3 {
+			color: #e97770;
+			text-align: center;
+		}
+
+		#footer p {
+			color: #ccc;
+			text-align: center;
+			margin: auto;
 		}
 
 		#footer hr {
@@ -2339,8 +2413,8 @@ input, select, textarea {
 			}
 
 		#footer .title {
-			background: #282b34 url("images/overlay.png");
-			color: #eee;
+			background: #282b34;
+			color: #cb931a;
 		}
 
 		#footer header.style1 {
@@ -2350,12 +2424,13 @@ input, select, textarea {
 		}
 
 			#footer header.style1 h2 {
-				color: #fff;
+				color: #cb931a;
 			}
 
 			#footer header.style1 .p {
 				color: inherit;
 			}
+
 
 		#footer .feature-list {
 			max-width: 100%;
@@ -2366,48 +2441,36 @@ input, select, textarea {
 			}
 
 			#footer .feature-list h3:before {
-				background: #3d4249 url("images/overlay.png");
+				background: #3d4249;
 			}
 
 /* Copyright */
 
 	#copyright {
 		text-align: center;
-		padding-top: 6em;
-		margin-top: 6em;
-		border-top: solid 1px rgba(255, 255, 255, 0.05);
+		overflow: hidden;
 	}
 
 		#copyright ul {
 			display: inline-block;
 			border-radius: 0.35em;
-			box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.05);
-			color: #aaa;
-			color: rgba(255, 255, 255, 0.25);
-			padding: 0.75em 2em;
+			color: #282b34;
+			color: #282b34;
 			font-size: 0.9em;
 		}
 
 			#copyright ul li {
 				display: inline-block;
-				margin-left: 1em;
-				padding-left: 1em;
-				border-left: solid 1px #333;
-				border-left-color: rgba(255, 255, 255, 0.05);
+				border-left: solid 1px #282b34;
+				border-left-color: #282b34;
 			}
 
-				#copyright ul li:first-child {
-					border-left: 0;
-					margin-left: 0;
-					padding-left: 0;
-				}
-
 		#copyright a {
-			color: inherit;
+			color: #282b34;
 		}
 
 			#copyright a:hover {
-				color: #fff;
+				color: #282b34;
 			}
 
 /* XLarge */
@@ -2474,13 +2537,15 @@ input, select, textarea {
 					padding-bottom: 4em;
 					margin-bottom: 4em;
 					border-bottom: solid 1px rgba(255, 255, 255, 0.05);
+					overflow: hidden;
 				}
 
 		/* Copyright */
 
 			#copyright {
-				padding-top: 4em;
-				margin-top: 4em;
+				padding-top: 0em;
+				margin-top: 0em;
+				overflow: hidden;
 			}
 
 	}
@@ -2523,13 +2588,13 @@ input, select, textarea {
 		/* Nav */
 
 			#nav {
-				display: none;
+				display: block;
 			}
 
 		/* Logo */
 
 			#logo {
-				top: 0;
+				top: 20px;
 			}
 
 		/* Intro */
@@ -2551,6 +2616,7 @@ input, select, textarea {
 			#footer .feature-list {
 				border-top: solid 1px rgba(255, 255, 255, 0.05);
 				padding-top: 4em;
+				overflow: hidden;
 			}
 
 	}
@@ -2560,6 +2626,7 @@ input, select, textarea {
 				#footer .feature-list > .row > :nth-child(2) > section {
 					border-top: 0;
 					padding-top: 0;
+					overflow: hidden;
 				}
 
 		}
@@ -2577,7 +2644,7 @@ input, select, textarea {
 				-webkit-transition: -webkit-transform 0.5s ease;
 				-ms-transition: -ms-transform 0.5s ease;
 				transition: transform 0.5s ease;
-				padding-bottom: 1px;
+				padding-bottom: 30px;
 			}
 
 			#titleBar {
@@ -2671,13 +2738,13 @@ input, select, textarea {
 				top: 0;
 				width: 275px;
 				z-index: 10002;
-				background: #242730 url("images/overlay.png");
+				background: #cb931a url("images/overlay.png");
 				box-shadow: inset -3px 0px 4px 0px rgba(0, 0, 0, 0.1);
 			}
 
 				#navPanel .link {
 					display: block;
-					color: rgba(255, 255, 255, 0.5);
+					color: rgb(250, 255, 93);
 					text-transform: uppercase;
 					text-decoration: none;
 					font-size: 0.85em;
@@ -2685,7 +2752,7 @@ input, select, textarea {
 					text-decoration: none;
 					height: 44px;
 					line-height: 44px;
-					border-top: solid 1px rgba(255, 255, 255, 0.05);
+					border-top: solid 1px #cb931a;
 					margin: 0 15px 0 15px;
 				}
 
@@ -2719,7 +2786,7 @@ input, select, textarea {
 				}
 
 				#navPanel .depth-0 {
-					color: #fff;
+					color: #ffef5d;
 				}
 
 			body.navPanel-visible #page-wrapper {
@@ -2862,6 +2929,7 @@ input, select, textarea {
 					margin-bottom: -2.5em;
 					margin-left: -9em;
 					padding-top: 0.5em;
+					overflow: hidden;
 				}
 
 					.wrapper .title:before, .wrapper .title:after {
@@ -2951,29 +3019,32 @@ input, select, textarea {
 					padding-bottom: 0;
 					margin-bottom: 2em;
 					border-bottom: 0;
+					overflow: hidden;
 				}
 
 				#footer .feature-list {
 					border-top: 0;
 					padding-top: 0;
+					overflow: hidden;
 				}
 
 		/* Copyright */
 
 			#copyright {
 				padding-top: 0;
-				margin-top: 4em;
+				margin-top: 0em;
 				border-top: 0;
+				overflow: hidden;
 			}
 
 				#copyright ul {
-					padding: 1em 2em;
+					padding: 0em 0em;
 					width: 100%;
 				}
 
 					#copyright ul li {
 						display: block;
-						margin: 0.5em 0 0 0;
+						margin: 0em 0 0 0;
 						border-left: 0;
 						padding: 0;
 					}
