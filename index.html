@@ -332,18 +332,25 @@
 											<fieldset id="fs-frm-inputs">
 											<label for="full-name">Full Name</label>
 											<input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+
 											<label for="email-address">Email Address  (Optional)</label>
-											<input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" >
+											<input type="email" name="email" id="email-address" placeholder="email@domain.tld" >
+
 											<label for="telephone">Telephone Number</label>
-											<input type="telephone" name="telephone" id="telephone" placeholder="(555) 555-5555" required="">
+											<input type="telephone" name="phone number" id="telephone" placeholder="(555) 555-5555" required="">
+
 											<label for="date">Date</label>
 											<input type="date" name="date" id="date" placeholder="mm/dd/yyyy" required="">
+
 											<label for="time">Start time</label>
-											<input type="time" name="time" id="time" placeholder="m--:-- --" required="">
+											<input type="time" name="start time" id="time" placeholder="m--:-- --" required="">
+
 											 <label for="hours">Number of hours</label>
-											<input type="number" name="hours" id="hours" placeholder="0" required="">
+											<input type="number" name="number of hours" id="hours" placeholder="0" required="">
+
 											<label for="street-address">Street Address</label>
-											<input type="text" name="street" id="street-address" placeholder="Street" required="">
+											<input type="text" name="address" id="street-address" placeholder="Street" required="">
+
 											<fieldset class="locale">
 											<legend>Locale</legend>
 											<input type="text" name="city" placeholder="City" required="">
@@ -403,40 +410,46 @@
 											</select>
 											<input type="text" name="postal-code" placeholder="zipcode" required="">
 											</fieldset>
+
 											<fieldset id="fs-frm-selects">
-											<label for="timely">Number of Children</label>
-											<select name="timely" id="timely" required="">
+											<label for="children">Number of Children</label>
+											<select name="children" id="children" required="">
 											<option value="" selected="" disabled="">Choose</option>
 											<option value="1">1</option>
-											<option value="3">2</option>
-											<option value="5">3</option>
-											<option value="7">4</option>
-											<option value="9">5</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
 											</select>
-											<label for="timely">Gender Preference</label>
-											<select name="timely" id="timely" required="">
+
+											<label for="gender Preference">Gender Preference</label>
+											<select name="gender Preference" id="timely" required="">
 											<option value="" selected="" disabled="">Choose</option>
-											<option value="1">Female</option>
-											<option value="3">Male</option>
-											<option value="5">No Preference</option>
+											<option value="Female">Female</option>
+											<option value="Male">Male</option>
+											<option value="No Preference">No Preference</option>
 											</select>
-											<label for="timely">Is homework help, cooking services, and/or pet care needed?</label>
-											<select name="quality" id="quality" required="">
+
+											<label for="extra services">Is homework help, cooking services, and/or pet care needed?</label>
+											<select name="extra services" id="extra services" required="">
 											<option value="" selected="" disabled="">Choose</option>
-											<option value="1">Yes</option>
-											<option value="3">No</option>
+											<option value="Yes">Yes</option>
+											<option value="No">No</option>
 											</select>
-											<label for="timely">Does the child have any behavioral/disability needs?</label>
-											<select name="quality" id="quality" required="">
+
+											<label for="behavioral/ disability needs">Does the child have any behavioral/disability needs?</label>
+											<select name="behavioral/ disability needs" id="behavioral/ disability needs" required="">
 											<option value="" selected="" disabled="">Choose</option>
-											<option value="1">Yes</option>
-											<option value="3">No</option>
+											<option value="Yes">Yes</option>
+											<option value="No">No</option>
 											</select>
+
 											</fieldset>
 											<label for="note">Notes</label>
 											<textarea rows="2" name="note" id="note" placeholder="Include any additional information"></textarea>
 											<input type="hidden" name="_subject" id="email-subject" value="Registration Form Submission">
 											</fieldset>
+											
 											<input style="background-color: #cb931a; margin: auto; margin-top: 3px; 
 											box-sizing: border-box; margin: 0; border: 0; padding: 0; line-height: 1; vertical-align: baseline;" 
 											type="submit" value="Send">
