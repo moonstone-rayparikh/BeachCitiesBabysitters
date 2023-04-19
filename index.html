@@ -41,12 +41,19 @@
 					<div class="title">About Us</div>
 					<div class="container">
 						<p class="style1">What we're here for</p>
-						<p class="style2">
-							Beach Cities Babysitters is a student run organization that aims to connect students looking to babysit
-							with parents in need. <strong style="color: #282b34">15%</strong> of all babysitters' profits go to charity! To book a time, fill out our booking form at the bottom of the website!
+						<p class="style2" style="font-size: x-large;">
+							Beach cities babysitting  is a student run organization that aims to connect 
+							students looking to babysit with parents in need. As an organization, we try 
+							our absolute best to accommodate parents’ needs, so that we can provide a service that 
+							is often looked over, but very much needed. To extend our service for children and 
+							families, <strong style="color: #282b34">15%</strong> of all babysitters' profits go 
+							to a charity that provides education for underprivileged & homeless kids!
 						</p>
-						<p class="style3">Our members are <strong>caring</strong>, <strong>responsive</strong> and <strong>helpful</strong>, 
-						and ready to give your child any support needed.</p>
+						<p class="style3">
+							The overall focus of our program is to make childcare more accessible by 
+							providing easy access to <strong>supportive</strong>, <strong>trustworthy</strong>, 
+							and <strong>reliable</strong> caregivers that are ready to give your child any support 
+							needed.</p>
 					</div>
 				</section>
 
@@ -305,6 +312,31 @@
 										parents and fun for the kids. </p>
 								</section>
 							</div>
+							<div class="col-4 col-12-medium">
+								<section class="highlight">
+									<a href="#"><img class="resize3" src="images/ericprof.jpg" alt="" /></a>
+									<h3><a href="#">Eric Chu</a></h3>
+									<p>Hi!! My name is Eric and I’m a sophomore at Mira Costa. I love working with kids and I’m 
+										currently teaching children Chinese at West High and running mentorship for choir. I 
+										love meeting people and making friends! I’m interested in a wide range of topics, 
+										especially reading, singing, and acting. </p>
+								</section>
+							</div>
+							<div class="col-4 col-12-medium">
+								<section class="highlight">
+									<a href="#"><img class="resize3" src="images/niaprof.jpg" alt="" /></a>
+									<h3><a href="#">Nia Nguyen</a></h3>
+									<p>Hi! I’m Nia and I’m a junior at Mira Costa. I absolutely love spending time 
+										with kids and being someone they can relate to and connect with. I’ve been 
+										babysitting for years and I also volunteer to mentor for AYSO girls soccer 
+										teams. I’m an honor roll student, I’m on the girl’s soccer team at Costa, 
+										I’m a part of the Mira Costa Band Program and I’m on their leadership team, 
+										and I’m in ASB Student Government. I encourage kids to be kind, to be 
+										creative, and to be the best person they can be. I love music and art and 
+										all creativity. I hope I can make a parent’s life easier and a kid’s life 
+										better! :) </p>
+								</section>
+							</div>
 						</div>
 					</div>
 					</div>
@@ -328,25 +360,27 @@
 
 								<!-- Contact Form -->
 									<section>
-										<form id="fs-frm" name="booking-form" accept-charset="utf-8" action="https://formspree.io/f/xwkjwrlp" method="post">
+										<form id="fs-frm" name="booking-form" accept-charset="utf-8" action="https://usebasin.com/f/b44b2812dabc" method="post">
 											<fieldset id="fs-frm-inputs">
 											<label for="full-name">Full Name</label>
 											<input type="text" name="name" id="full-name" placeholder="First and Last" required="">
 
-											<label for="email-address">Email Address  (Optional)</label>
+											<label for="email-address">Email Address (Optional)</label>
 											<input type="email" name="email" id="email-address" placeholder="email@domain.tld" >
 
 											<label for="telephone">Telephone Number</label>
 											<input type="telephone" name="phone number" id="telephone" placeholder="(555) 555-5555" required="">
 
-											<label for="date">Date</label>
-											<input type="date" name="date" id="date" placeholder="mm/dd/yyyy" required="">
+											<fieldset class="timing">
+												<label for="date">Date</label>
+												<input type="date" name="date" id="date" placeholder="mm/dd/yyyy" required="">
 
-											<label for="time">Start time</label>
-											<input type="time" name="start time" id="time" placeholder="m--:-- --" required="">
+												<label for="start_time">Start time</label>
+												<input type="time" name="start_time" id="time" placeholder="m--:-- --" required="">
 
-											 <label for="hours">Number of hours</label>
-											<input type="number" name="number of hours" id="hours" placeholder="0" required="">
+												<label for="no._hours">Number of hours</label>
+												<input type="number" name="no._hours" id="hours" placeholder="0" required="">
+											</fieldset>
 
 											<label for="street-address">Street Address</label>
 											<input type="text" name="address" id="street-address" placeholder="Street" required="">
@@ -412,19 +446,23 @@
 											</fieldset>
 
 											<fieldset id="fs-frm-selects">
-											<label for="children">Number of Children</label>
-											<select name="children" id="children" required="">
-											<option value="" selected="" disabled="">Choose</option>
-											<option value="1">1</option>
-											<option value="2">2</option>
-											<option value="3">3</option>
-											<option value="4">4</option>
-											<option value="5">5</option>
-											</select>
-
+												<fieldset class="ChInfo">
+													<label for="#children">Number of Children</label>
+													<select name="#children" id="#children" required="">
+													<option value="1" selected="1" disabled="">Choose</option>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+													<option value="5">5</option>
+													</select>
+													<label for="child-details">Age & Gender of Children</label>
+													<textarea rows="2" name="child-details" id="child-details" placeholder=
+													"Please only write the age and gender of each child here. There is a section at the bottom for additional notes :)."></textarea>
+												</fieldset>
 											<label for="gender Preference">Gender Preference</label>
 											<select name="gender Preference" id="timely" required="">
-											<option value="" selected="" disabled="">Choose</option>
+											<option value="" selected="No Preference" disabled="">No Preference</option>
 											<option value="Female">Female</option>
 											<option value="Male">Male</option>
 											<option value="No Preference">No Preference</option>
@@ -432,21 +470,21 @@
 
 											<label for="extra services">Is homework help, cooking services, and/or pet care needed?</label>
 											<select name="extra services" id="extra services" required="">
-											<option value="" selected="" disabled="">Choose</option>
+											<option value="" selected="No" disabled="">Choose</option>
 											<option value="Yes">Yes</option>
 											<option value="No">No</option>
 											</select>
 
 											<label for="behavioral/ disability needs">Does the child have any behavioral/disability needs?</label>
 											<select name="behavioral/ disability needs" id="behavioral/ disability needs" required="">
-											<option value="" selected="" disabled="">Choose</option>
+											<option value="" selected="No" disabled="">Choose</option>
 											<option value="Yes">Yes</option>
 											<option value="No">No</option>
 											</select>
 
 											</fieldset>
 											<label for="note">Notes</label>
-											<textarea rows="2" name="note" id="note" placeholder="Include any additional information"></textarea>
+											<textarea rows="2" name="note" id="note" placeholder="Include any additional information here!"></textarea>
 											<input type="hidden" name="_subject" id="email-subject" value="Registration Form Submission">
 											</fieldset>
 
@@ -483,6 +521,11 @@
 											  display: flex;
 											  align-items: baseline;
 											}
+
+											#fs-frm label {
+												display: block;
+												float: left;
+											}
 											
 											/* border, padding, margin, width */
 											#fs-frm input,
@@ -493,6 +536,9 @@
 											  background-color: rgba(255,255,255,0.9);
 											  padding: .75em 1rem;
 											  margin-bottom: 1.5rem;
+											}
+											#fs-frm textarea {
+												resize: none;
 											}
 											#fs-frm input:focus,
 											#fs-frm select:focus,
@@ -561,14 +607,62 @@
 											#fs-frm fieldset.locale select[name="state"] {
 											  margin-right: 3%;
 											}
+
+											/* child info */
+											#fs-frm fieldset.ChInfo select[name="#children"],
+											#fs-frm fieldset.ChInfo textarea[name="child-details"] {
+												display: inline-block;
+												overflow: hidden;
+												margin-right: 3%;
+											}
+
+											#fs-frm fieldset.ChInfo select[name="#children"] {
+												width: 40%;
+											}
+
+											#fs-frm fieldset.ChInfo textarea[name="child-details"] {
+												width: 60%;
+											}
+											
+											/* timing */
+											#fs-frm fieldset.timing {
+												display: table;
+											}
+
+
+											#fs-frm fieldset.timing input[name="date"],
+											#fs-frm fieldset.timing input[name="start_time"],
+											#fs-frm fieldset.timing input[name="no._hours"]{
+												float: left;
+												display: table-cell;
+												overflow:hidden;
+											}
+
+											#fs-frm fieldset.timing input[name="date"],
+											#fs-frm fieldset.timing input[name="start_time"] {
+												margin-right: 3%;
+											}
+
+											#fs-frm fieldset.timing input[name="date"]{
+												width: 40%;
+											}
+
+											#fs-frm fieldset.timing input[name="start_time"] {
+												width: 30%;
+											}
+
+											#fs-frm fieldset.timing input[name="no._hours"] {
+												width: 20%;
+											}
+											
 											</style>
 									</section>
 
 							</div>
 							<div class="col-6 col-12-medium">
 								<h3>Our Pricing</h3>
-								<p>We charge an hourly rate of $16, with an additional $5 per additional child.
-									We add $3 flat(not hourly) if there is homework help, cooking services, or pet care needed. 
+								<p>We charge an hourly rate of $20, with an additional $5 per additional child.
+									We add $3 flat(not hourly) if there is homework help, cooking/cleaning services, or pet care needed. 
 									When sending payment on paypal, please send payment to us as "friends and family".
 									<br />
 									<br />
@@ -595,7 +689,7 @@
 													</p>
 												</section>
 											</div>
-											<div class="col-6 col-12-small">
+											<div class="col-6 col-12- small">
 												<section>
 													<h3 class="icon solid fa-envelope">Email</h3>
 													<p>
@@ -616,7 +710,7 @@
 
 							</div>
 						</div>
-						<div id="diclaimer">
+						<div id="disclaimer">
 							<p style="color: aliceblue;">DISCLAIMER: Beach Cities Babysitting assumes no responsibility or liability for any 
 								harm that comes to a child while under the care of one of our babysitters. All responsibilities
 								go to the babysitter only. </p>
