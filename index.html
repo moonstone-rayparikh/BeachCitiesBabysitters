@@ -25,11 +25,11 @@
 						<nav id="nav">
 							<img class="llogo" src="images/beachcitieslillogo.png" alt="" />
 							<ul>
-								<li class="current"><a href="index.html">Home</a></li>
-								<li><a href="#About">About Us</a></li>
-								<li><a href="#Charity">The Charity</a></li>
-								<li><a href="#Members">Our Members</a></li>
-								<li><a href="#Booking">Booking</a></li>
+								<li><a href="#Home"  class="scrollLink" >Home</a></li>
+								<li><a href="#About" class="scrollLink" >About Us</a></li>
+								<li><a href="#Charity" class="scrollLink" >The Charity</a></li>
+								<li><a href="#Members" class="scrollLink" >Our Members</a></li>
+								<li><a href="#Booking" class="scrollLink" >Booking</a></li>
 							</ul>
 						</nav>
 
@@ -737,6 +737,15 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script>
+				$(document).ready(function() {
+					$('a[href^="#"]').click(function() {
+						$('html, body').animate({
+							scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
+						  }, 500);
+						return false;
+					  });
+				  });
+			  </script>
 	</body>
 </html>
